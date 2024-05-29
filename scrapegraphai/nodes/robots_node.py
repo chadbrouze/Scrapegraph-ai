@@ -106,7 +106,7 @@ class RobotsNode(BaseNode):
         else:
             parsed_url = urlparse(source)
             base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
-            loader =  ChromiumLoader([source], headless=True, slow_mo=0)
+            loader =  ChromiumLoader(base_url, headless=True, slow_mo=0)
             document = loader.load()
             if "ollama" in self.llm_model["model_name"]:
                 self.llm_model["model_name"] = self.llm_model["model_name"].split("/")[
