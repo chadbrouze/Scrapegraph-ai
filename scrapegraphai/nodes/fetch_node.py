@@ -57,7 +57,7 @@ class FetchNode(BaseNode):
         self.loader_kwargs = (
             {} if node_config is None else node_config.get("loader_kwargs", {})
         )
-        self.slow_mo = (0 if node_config["slow_mo"] is None else  node_config["slow_mo"])
+        self.slow_mo = (0 if node_config is None else  node_config.get("slow_mo", 0))
 
     def execute(self, state):
         """
