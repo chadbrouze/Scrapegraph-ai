@@ -23,6 +23,7 @@ docs/source/_static/
 venv/
 .venv/
 .vscode/
+.conda/
 
 # exclude pdf, mp3
 *.pdf
@@ -37,4 +38,8 @@ main.py
 lib/
 *.html
 .idea
+
+# extras
+cache/
+run_smart_scraper.py
 
